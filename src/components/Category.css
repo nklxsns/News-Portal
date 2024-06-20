@@ -1,0 +1,15 @@
+.dropdown-item {
+  cursor: pointer;
+
+  :hover {
+    background-color: #000000 !important;
+  }
+}
+
+.category-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 70px;
+    padding-top: 20px !important;
+}
