@@ -5,11 +5,13 @@ import "./Home.css";
 import Pagination from "../components/Pagination";
 import Category from "../components/Category";
 import Loading from "../components/Loading";
+import Search from "../components/Search";
 
 const Home = () => {
   const apiKey = import.meta.env.VITE_API_KEY;
   const [loading, setLoading] = useState(true);
-  const [category, setcategory] = useState("");
+  const [category, setCategory] = useState("");
+  const [search, setSearch] = useState("");
   const [currentPage, setcurrentPage] = useState(1);
   const [newsPerPage, setnewsPerPage] = useState(6);
 
@@ -21,7 +23,7 @@ const Home = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}&category=${category}`
+          `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}&category=${category}&q=${search}`
         );
 
         setArticles(
@@ -38,15 +40,16 @@ const Home = () => {
     }
 
     fetchData();
-  }, [category]);
+  }, [category, search]);
 
   const lastNewsIndex = currentPage * newsPerPage;
   const firstNewsIndex = lastNewsIndex - newsPerPage;
   const currentArticles = Articles.slice(firstNewsIndex, lastNewsIndex);
 
   return (
-    <>
-      <Category category={category} setcategory={setcategory} />
+    <div className="main-wrapper">
+      <Category category={category} setCategory={setCategory} />
+      <Search search={search} setSearch={setSearch} />
       {loading ? <Loading /> : <NewsCard articles={currentArticles} />}
       {
         <Pagination
@@ -56,7 +59,7 @@ const Home = () => {
           setcurrentPage={setcurrentPage}
         />
       }
-    </>
+    </div>
   );
 };
 

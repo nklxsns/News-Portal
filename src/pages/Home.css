@@ -2,3 +2,17 @@ a {
   text-decoration: none;
   color: black;
 }
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 30px;
+}
+
+@media screen and (min-width: 600px) {
+  .main-wrapper {
+    padding: 20px 70px;
+  }
+}

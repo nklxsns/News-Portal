@@ -1,7 +1,7 @@
 import React from "react";
 import "./Category.css";
 
-const Category = ({ category, setcategory }) => {
+const Category = ({ category, setCategory }) => {
   const categories = [
     "Business",
     "Entertainment",
@@ -13,13 +13,13 @@ const Category = ({ category, setcategory }) => {
   ];
 
   return (
-    <div className="category-wrapper">
+    <div className="category-wrapper mb-3">
       <div className="display-6 fw-medium">
         Top Headlines
       </div>
       <div className="dropdown">
         <button
-          className="btn btn-primary dropdown-toggle"
+          className="btn btn-sm btn-outline-primary dropdown-toggle"
           type="button"
           data-bs-toggle="dropdown"
           aria-expanded="false"
@@ -34,7 +34,7 @@ const Category = ({ category, setcategory }) => {
               <li
                 className="dropdown-item"
                 key={index}
-                onClick={() => setcategory(item)}
+                onClick={() => setCategory(item)}
               >
                 {item}
               </li>
