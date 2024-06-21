@@ -23,7 +23,7 @@ const Home = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}&category=${category}&q=${search}`
+          `https://newsapi.org/v2/top-headlines?language=en&apiKey=${apiKey}&category=${category}&q=${search}`
         );
 
         setArticles(

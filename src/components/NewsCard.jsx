@@ -15,7 +15,7 @@ const NewsCard = ({ articles }) => {
                         <img
                           src={article.urlToImage}
                           alt={article.title}
-                          className="img-fluid rounded object-fit-cover"
+                          className="img-fluid rounded"
                         />
                       </div>
                       <div className="col-md-8">
