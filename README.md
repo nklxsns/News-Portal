@@ -65,9 +65,9 @@ This project is a responsive React application that displays news articles fetch
     ```
 4. Create a `.env` file in the root of the project and add your NewsAPI key:
     ```env
-    REACT_APP_NEWS_API_KEY=your_news_api_key_here
+    VITE_API_KEY=your_news_api_key_here
     ```
 5. Start the development server:
     ```bash
-    npm start
+    npm run dev
     ```
