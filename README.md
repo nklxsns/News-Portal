@@ -29,7 +29,7 @@ This project is a responsive React application that displays news articles fetch
 
 ### API Integration
 
-- Uses a public news API (e.g., NewsAPI) to fetch news articles.
+- Uses a public news API (NewsAPI) to fetch news articles.
 - Handles loading states and errors during API calls.
 
 ### State Management
@@ -37,16 +37,15 @@ This project is a responsive React application that displays news articles fetch
 - Uses React hooks for state management to handle user inputs, API responses, and application state.
 - No Redux or other external state management libraries used.
 
-### Advanced Features (Optional)
+### Advanced Features
 
 - Search feature to allow users to search for articles by keywords.
-- "Favorites" feature where users can save articles. Uses local storage to persist favorites between sessions.
 
 ## Technical Requirements
 
 - Functional components and hooks.
 - Axios or Fetch API for making API calls.
-- Responsive design using CSS Grid, Flexbox, or frameworks like Bootstrap or TailwindCSS.
+- Responsive design using CSS Grid, Flexbox, and framework like Bootstrap.
 - Error handling and loading states for network requests.
 
 ## Installation
